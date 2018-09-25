@@ -83,11 +83,10 @@ public class SonyFileUtility {
                     byte fileData[] = new byte[(int) dirChild.length()];
                     fileInput.read(fileData);
                     fileInput.close();
-                    String absolutePath = dirChild.getAbsolutePath();
-                    String inputDirPath = directoryPath;
-                    String inputDir = inputDirPath.substring(inputDirPath.lastIndexOf("/") + 1, inputDirPath.length());
-                    String outputPath = absolutePath;
+                    String inputDir = directoryPath.substring(directoryPath.lastIndexOf("/") + 1, directoryPath.length());
+                    String outputPath = dirChild.getAbsolutePath();
                     String finalRelativePath = outputPath.substring(outputPath.lastIndexOf(inputDir), outputPath.length());
+                    //This gives the size of the file
                     long fileSize = dirChild.length();
                     // Create unique hash for current file
                     String uniqueFileHash = new BigInteger(1, messageDigest.digest(fileData)).toString(16);
