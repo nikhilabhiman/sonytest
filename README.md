@@ -5,5 +5,5 @@ How to Run
 - Run main method in Java class and provide valid directory input in Console. For example, on my MacBook, I give "/Users/{name}/Downloads/sonyfiles" as input in my IntelliJ command line console , where sonyfiles is my input directory and it contains sub-directories and .txt files
 
 Output
-- sonytest.csv file is generated which contains relative Input Directory Path, File size and md5 hash
+- sonytest.csv file is generated which contains relative Input Directory Path, File size and md5 hash of all the files present inside the input directory tree. 
 
